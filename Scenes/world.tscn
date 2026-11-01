@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bs6id45kej8mj"]
+
+[ext_resource type="Texture2D" uid="uid://cvmxmqdvgjoiq" path="res://Assets/Backgrounds/prussian-background.png" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://2pq8pcn3fxe1" path="res://Assets/Prefabs/player_1.tscn" id="2_go701"]
+[ext_resource type="Script" uid="uid://vy6cpde2g8vf" path="res://Scripts/Player_1/player_1_move.cs" id="3_5a7ea"]
+
+[node name="world" type="Node2D" unique_id=2103900748]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1179726335]
+position = Vector2(615, 336.5)
+scale = Vector2(2.5375, 2.1216667)
+texture = ExtResource("1_a02cp")
+
+[node name="paddle_1" parent="." unique_id=1403688793 instance=ExtResource("2_go701")]
+position = Vector2(93, 331)
+script = ExtResource("3_5a7ea")
+MoveSpeed = 550
